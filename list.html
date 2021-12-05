@@ -1,11 +1,21 @@
 <html>
     <head>
-        <link rel="stylesheet"  href="Style/list.css">
-        <link rel="stylesheet"  href="Script/list.js">
-        
+        <link rel="stylesheet" href="Style/list.css">
+        <script src="Script/list.js"></script>
     </head>
     <body>
-
-        
+        <div class="dropdown">
+            <button onclick="dropFunction()" class="dropbtn">Dropdown</button>
+            <div id="dropdown" class="dropdown-content">
+                <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                <button class="btn" onclick="filterSelection('fantasy')"> Fantasy</button>
+                <button class="btn" onclick="filterSelection('scifi')"> Sci-fi</button>
+                <button class="btn" onclick="filterSelection('horror')"> Horror</button>
+                <button class="btn" onclick="filterSelection('poem')"> Poetry</button>
+                <button class="btn" onclick="filterSelection('romance')"> Romance</button>
+                <button class="btn" onclick="filterSelection('mystery')"> Mystery</button>
+                <button class="btn" onclick="filterSelection('teen')"> Young Adult</button>
+            </div>
+        </div>
     </body>
 </html>
