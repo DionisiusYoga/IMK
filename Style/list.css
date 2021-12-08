@@ -38,6 +38,15 @@
   margin-bottom: 5px;
 }
 
+
+.books {
+  float: left;
+  background-color: #2196F3;
+  color: #ffffff;
+  margin: 2px;
+  display: none;
+}
+
 .dropdown a:hover {background-color: #ddd;}
 
 .show {display: block;}
