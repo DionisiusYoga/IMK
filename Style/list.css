@@ -43,8 +43,13 @@
   float: left;
   background-color: #2196F3;
   color: #ffffff;
-  margin: 2px;
+  margin: 5px;
   display: none;
+}
+
+.container{
+  margin-left: 25px;
+  margin-right:25px;
 }
 
 .dropdown a:hover {background-color: #ddd;}
