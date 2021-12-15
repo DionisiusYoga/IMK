@@ -1,11 +1,39 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="lib/w3.css">
+		<link rel="stylesheet" href="style/style.css">
+		<link rel="stylesheet" href="lib/w3-theme-sbux.css">
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src = "Script/product.js"></script>
         <link rel="stylesheet" href="Style/list.css">
         <script src="Script/list.js"></script>
     </head>
     <body>
+        <div class="w3-card-4" id="header">
+			<a href = "home.html" id="logo"><img style="margin: 50px 80px 20px 10%; width: 150px; height: 60px;" src="Images/logo.png"></a>
+			<!--Navbar-->
+			<a class="w3-button" id="left-navbar" href="">About</a>
+			<a class="w3-button" id="left-navbar" href="">New Release</a>
+			<a class="w3-button" id="left-navbar" href="">Wishlist</a>
+			<a class="w3-button" id="left-navbar" href="">Category <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+			
+			<a class="w3-button" id="right-navbar" style="float: right; font-weight:300; margin-right: 100px;" href=""><i class="fa fa-sign-in"></i> Sign In</a>
+			<a class="w3-button" id="right-navbar" style="float: right; font-weight: 300; font-size: 30px;" href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+			<input style="float: right;" type="text" placeholder=" &#xF002 Search..."  style="font-family:Arial, FontAwesome"/>
+		</div>
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <p>You are here : <a href="#">HOME</a></p>
+        </div>
+    </div>
         <div class="dropdown">
-            <button onclick="dropFunction()" class="dropbtn">Dropdown</button>
+            <button onclick="dropFunction()" class="dropbtn">Filter</button>
             <div id="dropdown" class="dropdown-content">
                 <button class="btn active" onclick="filterSelection('all')"> Show all</button>
                 <button class="btn" onclick="filterSelection('fantasy')"> Fantasy</button>
@@ -19,28 +47,28 @@
         </div>
 
         <div class="container">
-            <div class="books horror poem"><img src="Images/raven.jpg" width="150px" height="200px"></div>
-            <div class="books horror mystery"><img src="Images/babadook.jpg" width="150px" height="200px"></div>
-            <div class="books mystery"><img src="Images/gone.jpg" width="150px" height="200px"></div>
-            <div class="books mystery"><img src="Images/sherlock.jpg" width="150px" height="200px"></div>
-            <div class="books fantasy"><img src="Images/beowulf.jpg" width="150px" height="200px"></div>
-            <div class="books fantasy"><img src="Images/harry.jpg" width="150px" height="200px"></div>
-            <div class="books fantasy"><img src="Images/percy.jpg" width="150px" height="200px"></div>
-            <div class="books fantasy"><img src="Images/wheel.jpg" width="150px" height="200px"></div>
-            <div class="books horror"><img src="Images/dracula.jpg" width="150px" height="200px"></div>
-            <div class="books scifi"><img src="Images/dune.jpg" width="150px" height="200px"></div>
-            <div class="books scifi"><img src="Images/ender.jpg" width="150px" height="200px"></div>
-            <div class="books scifi"><img src="Images/poe.jpg" width="150px" height="200px"></div>
-            <div class="books teen"><img src="Images/express.jpg" width="150px" height="200px"></div>
-            <div class="books fantasy scifi"><img src="Images/farenheit.png" width="150px" height="200px"></div>
-            <div class="books horror scifi"><img src="Images/frankenstein.jpg" width="150px" height="200px"></div>
-            <div class="books horror scifi"><img src="Images/mist.jpg" width="150px" height="200px"></div>
-            <div class="books romance scifi"><img src="Images/jane.jpg" width="150px" height="200px"></div>
-            <div class="books romance"><img src="Images/pride.jpg" width="150px" height="200px"></div>
-            <div class="books teen romance"><img src="Images/star.jpg" width="150px" height="200px"></div>
-            <div class="books scifi"><img src="Images/rpo.jpg" width="150px" height="200px"></div>
-            <div class="books mystery scifi"><img src="Images/slaughterhouse.jpg" width="150px" height="200px"></div>
-            <div class="books scifi"><img src="Images/time.jpg" width="150px" height="200px"></div>   
+            <div class="books horror poem"><img src="Images/raven.jpg" width="280px" height="400px" onclick="productPage('raven.jpg')"></div>
+            <div class="books horror mystery"><img src="Images/babadook.jpg" width="280px" height="400px"></div>
+            <div class="books mystery"><img src="Images/gone.jpg" width="280px" height="400px"></div>
+            <div class="books mystery"><img src="Images/sherlock.jpg" width="280px" height="400px"></div>
+            <div class="books fantasy"><img src="Images/beowulf.jpg" width="280px" height="400px"></div>
+            <div class="books fantasy"><img src="Images/harry.jpg" width="280px" height="400px"></div>
+            <div class="books fantasy"><img src="Images/percy.jpg" width="280px" height="400px"></div>
+            <div class="books fantasy"><img src="Images/wheel.jpg" width="280px" height="400px"></div>
+            <div class="books horror"><img src="Images/dracula.jpg" width="280px" height="400px"></div>
+            <div class="books scifi"><img src="Images/dune.jpg" width="280px" height="400px"></div>
+            <div class="books scifi"><img src="Images/ender.jpg" width="280px" height="400px"></div>
+            <div class="books scifi"><img src="Images/poe.jpg" width="280px" height="400px"></div>
+            <div class="books teen"><img src="Images/express.jpg" width="280px" height="400px"></div>
+            <div class="books fantasy scifi"><img src="Images/farenheit.png" width="280px" height="400px"></div>
+            <div class="books horror scifi"><img src="Images/frankenstein.jpg" width="280px" height="400px"></div>
+            <div class="books horror scifi"><img src="Images/mist.jpg" width="280px" height="400px"></div>
+            <div class="books romance scifi"><img src="Images/jane.jpg" width="280px" height="400px"></div>
+            <div class="books romance"><img src="Images/pride.jpg" width="280px" height="400px"></div>
+            <div class="books teen romance"><img src="Images/star.jpg" width="280px" height="400px"></div>
+            <div class="books scifi"><img src="Images/rpo.jpg" width="280px" height="400px"></div>
+            <div class="books mystery scifi"><img src="Images/slaughterhouse.jpg" width="280px" height="400px"></div>
+            <div class="books scifi"><img src="Images/time.jpg" width="280px" height="400px"></div>   
         </div>
     </body>
 </html>
