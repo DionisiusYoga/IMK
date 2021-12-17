@@ -8,3 +8,7 @@ function productPage(c){
 function change(){
     document.getElementById(productImage).src = "Images/raven.jpg";
 }
+
+function back(){
+    location.href = "../list.html";
+}

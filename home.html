@@ -8,29 +8,43 @@
 		<link rel="stylesheet" href="lib/w3-theme-sbux.css">
 		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script src="Script/list.js"></script>
+		
 	</head>
 	<body>
 		<!-- Header class -->
 		<div class="w3-card-4" id="header">
-			<a href="home.html"><img style="margin: 50px 80px 20px 10%; width: 150px; height: 60px;" src="Images/logo.png"></a>
+			<img style="margin: 0px 80px 80px 10%; width: 150px; height: 60px; top: 0;" src="Images/logo.png">
 			<!--Navbar-->
 			<a class="w3-button" id="left-navbar" href="">About</a>
-			<a class="w3-button" id="left-navbar" href="../list.html">New Release</a>
+			<a class="w3-button" id="left-navbar" href="list.html">New Release</a>
 			<a class="w3-button" id="left-navbar" href="">Wishlist</a>
-			<a class="w3-button" id="left-navbar" href="">Category <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+			<div class="dropdown">
+                <a class="dropbtn" onclick="dropFunction()" id="left-navbar">Category <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                
+            </div>
 			
 			<a class="w3-button" id="right-navbar" style="float: right; font-weight:300; margin-right: 100px;" href=""><i class="fa fa-sign-in"></i> Sign In</a>
 			<a class="w3-button" id="right-navbar" style="float: right; font-weight: 300; font-size: 30px;" href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 			<input style="float: right;" type="text" placeholder=" &#xF002 Search..."  style="font-family:Arial, FontAwesome"/>
 		</div>
+		<div class = "dropdown">
+			<div id="dropdown" class="dropdown-content">
+				<button class="btn active" onclick="filterSelection('all')"> Show all</button>
+				<button class="btn" onclick="filterSelection('fantasy')"> Fantasy</button>
+				<button class="btn" onclick="filterSelection('scifi')"> Sci-fi</button>
+				<button class="btn" onclick="filterSelection('horror')"> Horror</button>
+				<button class="btn" onclick="filterSelection('poem')"> Poetry</button>
+				<button class="btn" onclick="filterSelection('romance')"> Romance</button>
+				<button class="btn" onclick="filterSelection('mystery')"> Mystery</button>
+				<button class="btn" onclick="filterSelection('teen')"> Young Adult</button>
+			</div>
+		</div>
 		<!-- BODY -->
 		<div class="w3-card-4" id="body-header">
-			<br><br><br><br><br><br><br>
-			<a class="" style="font-weight: 1000; font-size: 40px; font-family: bold;">
+			<div style="float: left;">
+				<br><br><br><br><br><br><br><br>
+			<a class="" style="font-weight: 1000; font-size: 40px; font-family: bold; text-decoration: none;">
 				Online Library
 			</a>
 			<br><br><br>
@@ -43,42 +57,245 @@
 			</a>
 			<br>
 			<a>
-				<button id="btn_startshop" type="button">Start Shopping</button>
+				<button class="w3-btn" id="btn_startshop" type="button">Start Shopping</button>
 			</a>
+			</div>
+			
+			<div class="" id="carousel">
+				<div class="slideshow-container" style=" width: 90%; margin-top: 35px; float: left; bottom: 0;">
 
-			<a id="demo" class="carousel slide" data-ride="carousel" style="float: right;" >
-
-				<!-- Indicators -->
-				<ul class="carousel-indicators">
-				  <li data-target="#demo" data-slide-to="0" class="active"></li>
-				  <li data-target="#demo" data-slide-to="1"></li>
-				  <li data-target="#demo" data-slide-to="2"></li>
-				</ul>
-				
-				<!-- The slideshow -->
-				<div class="carousel-inner">
-				  <div class="carousel-item active">
-					<img src="img/logo.png" alt="Los Angeles" width="1100" height="500">
-				  </div>
-				  <div class="carousel-item">
-					<img src="img/Dashboard Login.jpg" alt="Chicago" width="1100" height="500">
-				  </div>
-				  <div class="carousel-item">
-					<img src="img/logo.png" alt="New York" width="1100" height="500">
-				  </div>
+					
+					<div class="mySlides fade">
+					  <!--Gambar Dalam Carousel 1-->
+					  <img src="img/cimg1.png" style="height: 340px;">
+					</div>
+					
+					<div class="mySlides fade">
+					  <!--Gambar Dalam Carousel 1-->
+					  <img src="img/crslbg.png" style="height: 340px;">
+					</div>
+					
+					<div class="mySlides fade">
+					  <div class="numbertext"></div>
+					  <!--Gambar Dalam Carousel 1-->
+					  <img src="img/cimg1.png" style="height: 340px;">
+					</div>
+					
+					<a class="prev" onclick="plusSlides(-1)" style="top: 750px; margin-left: 255px; color: white;">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)" style="top: 60px; margin-left: 500px; color: white; float: left; position: relative;">&#10095;</a>
+					</div>
+					
+					<div style="margin:100px 400px 100px 300px; top: 0;">
+					  <span class="dot" onclick="currentSlide(1)" style="margin-right: 20px;"></span> 
+					  <span class="dot" onclick="currentSlide(2)" style="margin-right: 20px;"></span> 
+					  <span class="dot" onclick="currentSlide(3)"></span> 
+					</div>
 				</div>
-				
-				<!-- Left and right controls -->
-				<a class="carousel-control-prev" href="#demo" data-slide="prev">
-				  <span class="carousel-control-prev-icon"></span>
-				</a>
-				<a class="carousel-control-next" href="#demo" data-slide="next">
-				  <span class="carousel-control-next-icon"></span>
-				</a>
-			</a>
+			</div>
 		</div>
 		
-		<!-- MODAL -->
-		
+		<div class="w3-card-4" id="body-bestseller">
+			<br><br>
+			<div id="judul">
+				<span style="font-family: bold; margin: 50px 0px 50px 50px; font-size: 30px; font-weight: bold;">Best Seller Of The Month</span>
+				<a class="" style="margin-left: 50px; font-size: 15px;" id="category" href="">Popular Book</a>
+				<a class="" style="margin-left: 30px; font-size: 15px;" id="category" href="">Fantasy</a>
+				<a class="" style="margin-left: 30px; font-size: 15px;" id="category" href="">Bussiness & Investing</a>
+				<a class="" style="margin-left: 30px; font-size: 15px;" id="category" href="">Science Fiction</a>
+				<a class="" style="margin-left: 30px; font-size: 15px;" id="category" href="">Humor & Games</a>
+				<a class="" style="margin-left: 30px; font-size: 15px;" id="category" href="">Arts & Photography</a>
+			</div> 
+			<br><br><br>
+			<div class="scrollmenu" id="scrollmenu" style="height: 450px; width: 90%; margin-left: auto; margin-right: auto;">
+				<a class="w3-btn" href="#home"><img src="img/book4 1.png"></a>
+				<a class="w3-btn" href="#news"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#contact"><img src="img/book4 1.png"></a>
+				<a class="w3-btn" href="#about"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#support"><img src="img/book4 1.png"></a>
+				<a class="w3-btn" href="#blog"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#tools"><img src="img/book4 1.png"></a>
+				<a class="w3-btn" href="#base"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#custom"><img src="img/book4 1.png"></a>
+				<a class="w3-btn" href="#more"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#logo"><img src="img/book4 1.png"></a>
+				<a class="w3-btn" href="#friends"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#partners"><img src="img/book4 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+			</div>
+		</div>
+
+		<div class="w3-card-4" id="body-newrelease">
+			<br><br>
+			<div id="judul">
+				<span style="font-family: bold; margin: 50px 0px 50px 50px; font-size: 30px; font-weight: bold;">New Release</span>
+				<a class="" style="margin-left: 50px; font-size: 15px;" id="category" href="">Popular Book</a>
+				<a class="" style="margin-left: 30px; font-size: 15px;" id="category" href="">Fantasy</a>
+				<a class="" style="margin-left: 30px; font-size: 15px;" id="category" href="">Bussiness & Investing</a>
+				<a class="" style="margin-left: 30px; font-size: 15px;" id="category" href="">Science Fiction</a>
+				<a class="" style="margin-left: 30px; font-size: 15px;" id="category" href="">Humor & Games</a>
+				<a class="" style="margin-left: 30px; font-size: 15px;" id="category" href="">Arts & Photography</a>
+			</div> 
+			<br><br><br>
+			<div class="scrollmenu" id="scrollmenu" style="height: 850px; width: 90%; margin-left: auto; margin-right: auto;">
+				<a class="w3-btn" href="#home"><img src="img/book4 1.png"></a>
+				<a class="w3-btn" href="#news"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#contact"><img src="img/book4 1.png"></a>
+				<a class="w3-btn" href="#about"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#support"><img src="img/book4 1.png"></a>
+				<a class="w3-btn" href="#blog"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#tools"><img src="img/book4 1.png"></a>
+				<a class="w3-btn" href="#base"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#custom"><img src="img/book4 1.png"></a>
+				<a class="w3-btn" href="#more"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#logo"><img src="img/book4 1.png"></a>
+				<a class="w3-btn" href="#friends"><img src="img/book3 1.png"></a><br>
+				<a class="w3-btn" href="#partners"><img src="img/book4 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+			</div>
+		</div>
+
+		<div class="w3-card-4" id="body-bestrating">
+			<br><br>
+			<div id="judul">
+				<span style="font-family: bold; margin: 50px 0px 50px 50px; font-size: 30px; font-weight: bold;">Best Rating</span>
+				<a class="" style="margin-left: 50px; font-size: 15px;" id="category" href="">Popular Book</a>
+				<a class="" style="margin-left: 30px; font-size: 15px;" id="category" href="">Fantasy</a>
+				<a class="" style="margin-left: 30px; font-size: 15px;" id="category" href="">Bussiness & Investing</a>
+				<a class="" style="margin-left: 30px; font-size: 15px;" id="category" href="">Science Fiction</a>
+				<a class="" style="margin-left: 30px; font-size: 15px;" id="category" href="">Humor & Games</a>
+				<a class="" style="margin-left: 30px; font-size: 15px;" id="category" href="">Arts & Photography</a>
+			</div> 
+			<br><br><br>
+			<div class="scrollmenu" id="scrollmenu" style="height: 850px; width: 90%; margin-left: auto; margin-right: auto;">
+				<a class="w3-btn" href="#home"><img src="img/book4 1.png"></a>
+				<a class="w3-btn" href="#news"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#contact"><img src="img/book4 1.png"></a>
+				<a class="w3-btn" href="#about"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#support"><img src="img/book4 1.png"></a>
+				<a class="w3-btn" href="#blog"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#tools"><img src="img/book4 1.png"></a>
+				<a class="w3-btn" href="#base"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#custom"><img src="img/book4 1.png"></a>
+				<a class="w3-btn" href="#more"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#logo"><img src="img/book4 1.png"></a>
+				<a class="w3-btn" href="#friends"><img src="img/book3 1.png"></a><br>
+				<a class="w3-btn" href="#partners"><img src="img/book4 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+				<a class="w3-btn" href="#people"><img src="img/book3 1.png"></a>
+			</div>
+		</div>
+		<br>
+		<div class="contact">
+			<p style="font-family: bold; font-size: 40px; text-align: center;">
+				Get our news in this social media
+			</p>
+			<a href=""><i class="fa fa-facebook-square"></i></a>
+			<a href=""><i class="fa fa-twitter"></i></a>
+			<a href=""><i class="fa fa-vk"></i></a>
+			<a href=""><i class="fa fa-instagram"></i></a>
+			<a href=""><i class="fa fa-youtube-play"></i></a>
+		</div>
+		<br><br>
+		<div class="footer" style="float: left; width: 100%;">
+			<table>
+				<tr>
+					<th>
+						<a><img style="margin-top: 80px; margin-left: 190px; margin-right: 300px; height: 60%; width: 60%;" src="img/logo white.png"></a>
+					</th>
+					<th>
+						<a style="text-align: left; font-family: reguler; color: white; font-weight: lighter;">
+							<br><br><br><br>
+							<p style="font-size: 18px; margin-right: 150px;">Company</p>
+							<p>About</p>
+							<p>Press</p>
+							<p>Careers</p>
+							<p>Partners</p>
+						</a>
+					</th>
+					<th>
+						<br>
+					</th>
+					<th>
+						<br>
+					</th>
+					<th>
+						<a style="text-align: left; font-family: reguler; color: white; font-weight: lighter;">
+							<br><br><br><br>
+							<p style="font-size: 18px; margin-right: 150px; float: none;">Legal</p>
+							<p>Cookies Policy</p>
+							<p>Privacy Policy</p>
+							<p>Law Enforcement</p>
+						</a>
+					</th>
+					<th>
+						<a style="text-align: left; font-family: reguler; color: white; font-weight: lighter;">
+							<br><br><br><br>
+							<p style="font-size: 18px; margin-right: 150px;">Support</p>
+							<p>FAQ</p>
+							<p>Status</p>
+							<p>Terms of Sevice</p>
+						</a>
+					</th>
+				</tr>
+			</table>
+			
+			
+		</div>
+
+		<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+			showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+			showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			setTimeout(showSlides, 3000);
+			if (n > slides.length) {slideIndex = 1}
+			if (n < 1) {slideIndex = slides.length}
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";  
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";
+			dots[slideIndex-1].className += " active";
+			}
+		</script>
 	</body>
 </html>

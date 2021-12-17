@@ -21,19 +21,16 @@
 			<a class="w3-button" id="left-navbar" href="">About</a>
 			<a class="w3-button" id="left-navbar" href="">New Release</a>
 			<a class="w3-button" id="left-navbar" href="">Wishlist</a>
-			<a class="w3-button" id="left-navbar" href="">Category <i class="fa fa-caret-down" aria-hidden="true"></i></a>
 			
+			<div class="dropdown">
+                <a class="dropbtn" onclick="dropFunction()" id="left-navbar">Category <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                
+            </div>
 			<a class="w3-button" id="right-navbar" style="float: right; font-weight:300; margin-right: 100px;" href=""><i class="fa fa-sign-in"></i> Sign In</a>
 			<a class="w3-button" id="right-navbar" style="float: right; font-weight: 300; font-size: 30px;" href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 			<input style="float: right;" type="text" placeholder=" &#xF002 Search..."  style="font-family:Arial, FontAwesome"/>
 		</div>
-        <!-- Breadcrumb -->
-        <div class="breadcrumb">
-            <p>You are here : <a href="#">HOME</a></p>
-        </div>
-    </div>
-        <div class="dropdown">
-            <button onclick="dropFunction()" class="dropbtn">Filter</button>
+        <div class = "dropdown">
             <div id="dropdown" class="dropdown-content">
                 <button class="btn active" onclick="filterSelection('all')"> Show all</button>
                 <button class="btn" onclick="filterSelection('fantasy')"> Fantasy</button>
@@ -45,6 +42,8 @@
                 <button class="btn" onclick="filterSelection('teen')"> Young Adult</button>
             </div>
         </div>
+        
+    </div>
 
         <div class="container">
             <div class="books horror poem"><img src="Images/raven.jpg" width="280px" height="400px" onclick="productPage('raven.jpg')"></div>
