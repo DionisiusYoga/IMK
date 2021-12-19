@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Jaya Sejahtera</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../lib/w3.css">
+		<link rel="stylesheet" href="../style/loginPageCss.css">
+		<link rel="stylesheet" href="../lib/w3-theme-sbux.css">
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+		
+	</head>
+	<body>
+		<!--BODY-->
+		<div class="container">
+			<div id="sign-in-container" class="form-container">
+				<form>
+					<h1 id="test1">Sign in</h1>
+					<span>use your account</span>
+					<input id="username" type="text" placeholder="Username" />
+					<input id="password" type="password" placeholder="Password" />
+					<input id="email" type="email" placeholder="Email" />
+					<a id="wrong" style="color: red;">Wrong Username or Password</a>
+					<a class="w3-btn" id="forget">Forgot your password?</a>
+					<a><button class="w3-btn" type="button" id="signin">Sign In</button></a>
+					<a><button class="w3-btn" type="button" id="verif">Send Verification</button></a>
+					<a id="back" style="text-decoration: none; float: left; font-size: 20px; cursor: pointer;"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</a>
+				</form>
+			</div>
+
+			<div class="right-content">
+				<div class="overlay-panel overlay-right">
+					<h1>Jaya Sejahtera</h1>
+					<p>Enter your personal details and start journey with us</p>
+					<button id="signUp">Sign Up</button>
+				</div>
+			</div>
+		</div>
+		<script>
+			var signin = document.getElementById('signin');
+			var uname = document.getElementById('username');
+			var fps = document.getElementById('wrong');
+			var form = document.getElementById('sign-in-container');
+			var back1 = document.getElementById('back');
+			var password = document.getElementById('password');
+			var email = document.getElementById('email');
+			var verif = document.getElementById('verif');
+			var backindex = 1;
+
+			var forget = document.getElementById('forget');
+
+			signin.addEventListener('click', function(){
+				if(uname.value == "6181901052"){
+					location.href = "../home-Loginned.html";
+				}else{
+					fps.style.display = "block";
+				}
+			})
+
+			back.addEventListener('click',function(){
+				if(backindex == "1"){
+					location.href = "../home.html";
+				}else if(backindex == "0"){
+					form.style.width = "50%";
+					form.style.zIndex = 2;
+					backindex = 1;
+					uname.style.display = "block";
+					password.style.display = "block";
+					signin.style.display = "block";
+					forget.style.display = "block";
+					email.style.display = "none";
+					verif.style.display = "none";
+				}
+				
+			})
+
+			forget.addEventListener('click',function(){
+				form.style.width = "100%";
+				form.style.zIndex = 2;
+				backindex = 0;
+				uname.style.display = "none";
+				password.style.display = "none";
+				signin.style.display = "none";
+				forget.style.display = "none";
+				fps.style.display = "none";
+				email.style.display = "block";
+				verif.style.display = "block";
+			})
+		</script>
+    </body>
+</html>
